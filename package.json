@@ -1,7 +1,7 @@
 {
-  "name": "battle_of_paradigms",
+  "name": "switch",
   "version": "1.0.0",
-  "description": "battle_of_paradigms example for frp",
+  "description": "switch example for frp",
   "main": "index.js",
   "scripts": {
     "build": "webpack --config ./build/webpack.prod.js",
@@ -51,7 +51,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/huanhulan/battle_of_paradigms.git"
+    "url": "git+https://github.com/huanhulan/switch.git"
   },
   "config": {
     "commitizen": {

@@ -1,6 +1,6 @@
-# battle-of-paradigms
+# switch
 
-A typescript implementation of battle-of-paradigms from [functional reactive programming](https://www.amazon.com/Functional-Reactive-Programming-Stephen-Blackheath/dp/1633430103)
+A typescript implementation of switch from [functional reactive programming](https://www.amazon.com/Functional-Reactive-Programming-Stephen-Blackheath/dp/1633430103)
 
 ## Prerequisite: Node.js
 
@@ -10,14 +10,14 @@ Install [Node.js® and npm](https://nodejs.org/en/download/current/) if they are
 
 ### via NPM
 ```bash
-$> git clone https://github.com/huanhulan/battle_of_paradigms.git
+$> git clone https://github.com/huanhulan/switch.git
 $> cd battle_of_paradigms
 $> npm install
 ```
 
 ### via Yarn
 ```bash
-$> git clone https://github.com/huanhulan/battle_of_paradigms.git
+$> git clone https://github.com/huanhulan/switch.git
 $> cd battle_of_paradigms
 $> yarn
 ```
