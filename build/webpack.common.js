@@ -42,7 +42,7 @@ module.exports = function (cssLoaderOptions, sassLoaderOptions) {
                     loader: "json-loader"
                 }]
             }, {
-                test: /\.(png)$/i,
+                test: /\.(webp)$/i,
                 use: [{
                     loader: "file-loader",
                     options: {

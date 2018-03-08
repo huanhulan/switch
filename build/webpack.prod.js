@@ -6,7 +6,7 @@ const webpack = require('webpack');
 const cssLoaderOptions = {
     minimize: true,
     namedExport: true,
-    scss: true,
+    scss: false,
     modules: false,
     url: true,
     root: '.'

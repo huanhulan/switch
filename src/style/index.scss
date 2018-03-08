@@ -14,6 +14,10 @@ $left-bottom-shadow: 1px 1px 3px 0px $deep-black;
 $bottom-shadow: 0px 5px 5px 3px $deep-black;
 $min-width: 1440px;
 
+.hidden {
+  display: none;
+}
+
 html, body {
   width: 100vw;
   height: 100vh;
@@ -43,7 +47,7 @@ html, body {
       transform-style: preserve-3d;
       position: absolute;
       z-index: -2;
-      background-color: darken($cheese-yellow, 50%);
+      background-color: darken($cheese-yellow, 20%);
       transform: rotateX(90deg) scale(2);
       bottom: 0;
     }
@@ -81,6 +85,13 @@ html, body {
           background-color: $deep-black;
           background-size: 100% 100%;
           background-repeat: no-repeat;
+          position: relative;
+
+          .canvas {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+          }
         }
 
         .controls-1,
@@ -225,5 +236,102 @@ html, body {
         transform-style: preserve-3d;
       }
     }
+
+    .controller {
+      width: 190px;
+      height: 320px;
+      background-color: #000;
+      background-image: linear-gradient(90deg, #131313 0, #111111 0, #1c1c1c 0, #666666 8%, #a59393 50%, #595959 92%, #000000 100%, #4c4c4c 100%);
+      border: 1px solid transparent;
+      border-radius: 10px;
+      box-shadow: 3px 3px 10px #222;
+      padding: 30px;
+      font-family: sans-serif;
+      color: #eee;
+      position: absolute;
+      bottom: 5px;
+      transform: rotateX(70deg);
+
+      .controls {
+        position: relative;
+      }
+      .display {
+        clear: both;
+        width: 100%;
+        height: 20px;
+        padding: 10px 0;
+        background: #222;
+        box-shadow: inset 2px 0 11px #000;
+        border-radius: 5px 5px 0;
+        text-align: center;
+        color: #48D1CC;
+        font-size: 12px;
+        text-shadow: 0 0 5px #FFFACD;
+        font-family: monospace;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        line-height: 18px;
+      }
+      .button {
+        float: left;
+        margin: 10px 10px 20px;
+        background: #303131;
+        width: 40px;
+        height: 40px;
+        border-radius: 30px;
+        border: 1px solid #000;
+        text-align: center;
+        position: relative;
+        box-shadow: 0 0 5px #000, inset 0 0 20px #000;
+      }
+
+      .button:hover,
+      .button.active {
+        box-shadow: 0 0 1px #000, inset 0 0 9px #000;
+      }
+
+      ins > span {
+        position: absolute;
+        font-size: 9px;
+        left: 0;
+        top: -20px;
+        width: 34px;
+        color: #fff;
+        font-weight: bold;
+        padding: 3px;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      .red {
+        background: red !important;
+      }
+
+      .blue {
+        background: azure !important;
+      }
+    }
   }
+}
+
+.ch {
+  background-clip: border-box;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.ch-1 {
+  background-image: url("../statics/daily_show.webp");
+}
+
+.ch-2 {
+  background-image: url("../statics/fishing.webp");
+}
+
+.ch-3 {
+  background-image: url("../statics/honest_trailer.webp");
+}
+
+.ch-4 {
+  background-image: url("../statics/lost_in_space.webp");
 }
