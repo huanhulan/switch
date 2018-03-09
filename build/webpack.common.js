@@ -42,15 +42,12 @@ module.exports = function (cssLoaderOptions, sassLoaderOptions) {
                     loader: "json-loader"
                 }]
             }, {
-                test: /\.(webp)$/i,
+                test: /\.(webp)$/,
                 use: [{
-                    loader: "file-loader",
+                    loader: 'url-loader',
                     options: {
-                        name: "[hash].[ext]",
-                        outputPath: "statics/"
+                        limit: 157286400,
                     }
-                }, {
-                    loader: "image-webpack-loader"
                 }]
             }]
         },
