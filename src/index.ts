@@ -3,8 +3,25 @@ import frp from "./frp";
 import generateNoise from "./noize";
 import * as styles from "./style/index.scss";
 import {Channels, Controller, OnOff} from "./types";
+import * as modernizrConfig from "./../.modernizrrc.json";
+
+const modernizr = modernizrConfig;
+const features = ["cssvhunit", "cssgrid", "canvas",];
+const $app = document.getElementById("viewport") as HTMLDivElement;
 
 window.onload = () => {
+    const supports = features.map(f => modernizr[f]);
+    if (supports.filter(support => !support).length) {
+        const notSupports = supports.reduce((tupple, support, index) => {
+            if (!support) {
+                tupple.push(features[index]);
+            }
+            return tupple;
+        }, []).join(", ");
+        $app.innerHTML = `Your browser does not support: ${notSupports}.`
+            + "Please use modern browsers like Chrome to get the best user experience.";
+        return;
+    }
     console.log(styles)
     const $canvas = document.getElementById("canvas") as HTMLCanvasElement;
     const $power = document.getElementById("power") as HTMLCanvasElement;
